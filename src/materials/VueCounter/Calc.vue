@@ -1,18 +1,16 @@
 <template>
-  <button @click="add">+</button>
-  <button @click="sub">-</button>
+	<button @click="add">+</button>
+	<button @click="sub">-</button>
 </template>
 
 <script setup>
-import { defineEmits } from "vue";
-
-const emits = defineEmits(["add", "sub"]);
+const emits = defineEmits(['add', 'sub'])
 
 const add = () => {
-  emits("add");
-};
+	emits('add')
+}
 
 const sub = () => {
-  emits("sub");
-};
+	emits('sub')
+}
 </script>

@@ -1,23 +1,23 @@
 <template>
-  <div>
-    <h1>{{ count }}</h1>
+	<div>
+		<h1>{{ count }}</h1>
 
-    <Calc @add="add" @sub="sub" />
-  </div>
+		<Calc @add="add" @sub="sub" />
+	</div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
-import Calc from "./Calc.vue";
+import Calc from './Calc.vue'
 
-const count = ref(0);
+const count = ref(0)
 
 const add = () => {
-  count.value++;
-};
+	count.value++
+}
 
 const sub = () => {
-  count.value--;
-};
+	count.value--
+}
 </script>

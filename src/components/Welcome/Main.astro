@@ -1,0 +1,123 @@
+<!-- 主要内容 -->
+<main class="pt-24 pb-16">
+	<!-- 英雄区域 -->
+	<section class="container mx-auto px-4 mb-24">
+		<div class="mx-auto text-center">
+			<h1
+				class="text-[clamp(2rem,5vw,3.5rem)] font-light leading-tight mb-8 tracking-tight"
+			>
+				看似寻常最奇崛，成如容易却艰辛
+			</h1>
+			<p
+				class="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 mb-10 text-balance"
+			>
+				探索前端组件从简单到复杂，从原生到框架的演进历程，见证每一次技术突破背后的思考与实践。
+			</p>
+			<a
+				href="#history"
+				class="inline-flex items-center gap-2 px-6 py-3 border border-neutral-800 dark:border-neutral-200 rounded-full hover:bg-neutral-800 hover:text-white dark:hover:bg-neutral-200/50 dark:hover:text-neutral-900 transition-colors duration-300"
+			>
+				开始探索
+				<i class="fa fa-arrow-down" aria-hidden="true"></i>
+			</a>
+		</div>
+	</section>
+
+	<!-- 组件类型 -->
+	<section id="components" class="container mx-auto px-4 mb-24">
+		<h2 class="text-3xl font-light mb-12 text-center">组件类型</h2>
+
+		<div
+			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
+		>
+			<!-- 组件卡片1 -->
+			{
+				[
+					{
+						icon: '',
+						title: '基础组件',
+						desc: '按钮、输入框、标签等最基本的UI元素，构成了所有复杂组件的基础。'
+					},
+					{
+						icon: '',
+						title: '复合组件',
+						desc: '由多个基础组件组合而成，如表单、卡片、导航栏等具有完整功能的单元。'
+					},
+					{
+						icon: '',
+						title: '业务组件',
+						desc: '针对特定业务场景封装的组件，如购物车、数据报表、地图集成等。'
+					}
+				].map(item => (
+					<div class="bg-white border border-neutral-200 dark:border-neutral-200 rounded-xl p-6 hover:shadow-md transition-shadow group">
+						<div class="w-12 h-12 bg-neutral-100 dark:bg-neutral-200 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
+							<i
+								class="fa fa-window-maximize text-xl"
+								aria-hidden="true"
+							/>
+						</div>
+						<h3 class="text-xl font-medium mb-2">{item.title}</h3>
+						<p class="text-neutral-600 dark:text-neutral-400">
+							{item.desc}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</section>
+
+	<!-- 资源链接 -->
+	<section id="resources" class="container mx-auto px-4 mb-24">
+		<h2 class="text-3xl font-light mb-12 text-center">学习资源</h2>
+
+		<div class="max-w-3xl mx-auto">
+			<ul class="space-y-4">
+				{
+					[
+						{ icon: '', title: '组件设计模式与最佳实践' },
+						{ icon: '', title: '现代前端组件库源码解析' },
+						{ icon: '', title: '前端组件化发展简史' },
+						{ icon: '', title: '组件设计原则与案例分析' }
+					].map(item => (
+						<li>
+							<a
+								href="#"
+								class="flex items-center gap-3 p-4 border border-neutral-200 dark:border-neutral-200 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-200/50 transition-colors"
+							>
+								<i
+									class="fa fa-history text-accent"
+									aria-hidden="true"
+								/>
+								<span>{item.title}</span>
+								<i
+									class="fa fa-arrow-right ml-auto text-neutral-400"
+									aria-hidden="true"
+								/>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</section>
+
+	<!-- 关于 -->
+	<section id="about" class="container mx-auto px-4">
+		<div class="max-w-3xl mx-auto text-center">
+			<h2 class="text-3xl font-light mb-6">关于本网站</h2>
+			<p class="text-neutral-600 dark:text-neutral-400 mb-8">
+				这是一个记录前端组件演进历程的个人网站，旨在梳理前端组件从简单到复杂的发展脉络，
+				探讨每一次技术变革背后的设计思想与实现细节。
+			</p>
+			<div
+				class="inline-flex items-center gap-2 text-neutral-600 dark:text-neutral-400"
+			>
+				<i class="fa fa-quote-left" aria-hidden="true"></i>
+				<span class="italic"
+					>技术的进步，往往隐藏在看似平凡的日常迭代之中</span
+				>
+				<i class="fa fa-quote-right" aria-hidden="true"></i>
+			</div>
+		</div>
+	</section>
+</main>
