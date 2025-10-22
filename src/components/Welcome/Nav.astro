@@ -10,30 +10,20 @@
 		<div class="flex items-center gap-4">
 			<nav class="hidden md:block">
 				<ul class="flex gap-6">
-					<li>
-						<a
-							href="#history"
-							class="hover:text-accent transition-colors">历史</a
-						>
-					</li>
-					<li>
-						<a
-							href="#components"
-							class="hover:text-accent transition-colors">组件</a
-						>
-					</li>
-					<li>
-						<a
-							href="#resources"
-							class="hover:text-accent transition-colors">资源</a
-						>
-					</li>
-					<li>
-						<a
-							href="#about"
-							class="hover:text-accent transition-colors">关于</a
-						>
-					</li>
+					{
+						['历史', '组件', '资源', '关于', '历史', '历史'].map(
+							item => (
+								<li>
+									<a
+										href="#history"
+										class="hover:text-accent transition-colors"
+									>
+										{item}
+									</a>
+								</li>
+							)
+						)
+					}
 				</ul>
 			</nav>
 			<button id="mobile-menu-button" class="md:hidden p-2">
